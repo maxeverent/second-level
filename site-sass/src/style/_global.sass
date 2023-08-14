@@ -1,0 +1,119 @@
+@import 'mixins'
+
+body
+    margin: 0
+    padding: 0
+    min-height: 100vh
+    font-family: 'Montserrat-Regular', sans-serif
+    color: #333333
+    position: relative
+    overflow: hidden
+
+html
+    overflow-x: hidden
+
+a
+    font-family: 'Montserrat-Bold', sans-serif
+    text-decoration: none
+    &:hover
+        color: #A2CC5C
+
+ul
+    list-style: none
+
+button
+    cursor: pointer
+    font-family: 'Montserrat-Bold', sans-serif
+    font-size: 18px
+    font-weight: 700
+    line-height: 21px
+    letter-spacing: 0em
+    text-align: center
+
+h1
+    font-family: 'Montserrat-Bold', sans-serif
+    font-size: 87px
+    font-weight: 700
+    line-height: 110px
+    letter-spacing: 0px
+    text-align: left
+    @include respond-to(1200)
+        font-size: 67px
+        font-weight: 700
+        line-height: 90px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(700)
+        font-size: 56px
+        font-weight: 700
+        line-height: 70px
+        letter-spacing: 0px
+        text-align: center
+    @include respond-to(576)
+        font-size: 38px
+        font-weight: 700
+        line-height: 55px
+        letter-spacing: 0px
+        text-align: center
+
+h2
+    font-family: 'Montserrat-Bold', sans-serif
+    font-size: 34px
+    font-weight: 700
+    line-height: 41px
+    letter-spacing: 0px
+    text-align: center
+    @include respond-to(1440)
+        text-align: left
+    @include respond-to(1200)
+        font-size: 28px
+        font-weight: 700
+        line-height: 34px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(768)
+        font-size: 27px
+        font-weight: 700
+        line-height: 29px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(700)
+        text-align: center
+    @include respond-to(576)
+        text-align: center
+
+h3
+    font-family: 'Montserrat-Bold', sans-serif
+    font-size: 44px
+    font-weight: 700
+    line-height: 54px
+    letter-spacing: 0px
+    text-align: left
+    margin: 0
+    @include respond-to(1440)
+        font-size: 38px
+        font-weight: 700
+        line-height: 46px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(1200)
+        font-size: 38px
+        font-weight: 700
+        line-height: 46px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(768)
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        letter-spacing: 0px
+        text-align: left
+    @include respond-to(700)
+        text-align: center
+    @include respond-to(576)
+        font-size: 24px
+        line-height: 30px
+        text-align: center
+
+hr
+    border: 1px solid #F0F0F0

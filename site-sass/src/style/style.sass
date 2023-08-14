@@ -1,0 +1,835 @@
+@import 'fonts'
+@import 'global'
+@import 'menu'
+@import 'slider'
+@import 'up-arrow'
+@import 'mixins'
+
+.container
+    max-width: 1408px
+    margin: 0 auto
+    padding: 0 15px
+    @include respond-to(1200)
+        padding: 0 40px
+    @include respond-to(992)
+        padding: 0 28px
+    @include respond-to(576)
+        padding: 0 15px
+
+.header
+    max-width: 1920px
+    position: relative
+    margin: 0 auto
+    &__container
+        display: flex
+        justify-content: space-between
+        height: 68px
+        margin: 38px auto
+        align-items: center
+    &__logos
+        width: 384px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logos-main-logo
+        margin-right: 50px
+    &__partner-logos
+        @include respond-to(576)
+            display: none !important
+    &__burger-menu-btn
+        background-color: #FFFFFF
+        border: none
+        @include respond-to(1140)
+            display: block !important
+        &_status
+            display: none
+            @include respond-to(992)
+                display: unset
+
+    &__rectangle_green
+        width: 149px
+        height: 211px
+        background-color: #A2CC5C
+        position: absolute
+        top: -43px
+        left: 1771px
+        z-index: 6666
+
+.partner-logos
+    height: 34px
+    width: 98px
+    display: flex
+    justify-content: space-between
+    gap: 20px
+
+.menu
+    width: 609px
+    &__list
+        display: flex
+        max-width: 100%
+        justify-content: space-between
+        padding: 0
+    &__list-item
+        margin: 0
+        &:hover
+            display: block
+    &__list-link
+        color: #333333
+        font-size: 15px
+        font-weight: 700
+        line-height: 18px
+        letter-spacing: 0em
+        text-align: left
+        @include respond-to(1200)
+            font-size: 14px
+            line-height: 17px
+            text-align: left
+    @include respond-to(1200)
+        width: 506px
+    @include respond-to(1140)
+        display: none
+
+.menu__list-item_hover:hover .sub-menu
+    display: block
+
+.sub-menu
+    width: 230px
+    height: 226px
+    border: 1px solid #F0F0F0
+    box-shadow: 0px 0px 14px 0px #33333324
+    position: absolute
+    z-index: 1
+    background-color: white
+    padding: 0
+    display: none
+    &__link
+        color: #333333
+        font-size: 15px
+        font-weight: 700
+        line-height: 18px
+        letter-spacing: 0em
+        text-align: left
+    &__line
+        margin: 0
+    &__item
+        margin: 23px 0px 23px 20px
+
+.site-params
+    display: flex
+    justify-content: space-between
+    width: 141px
+    padding: 0
+    margin-right: 10px
+    align-items: center
+    &__link
+        font-family: 'Baufra-Medium', sans-serif
+        font-size: 16px
+        font-weight: 600
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: #333333
+        &_selected
+            color: #A2CC5C
+    @include respond-to(768)
+        display: none
+
+.glasses-icon
+    width: 37px
+    height: 14px
+    background-size: cover
+    background-image: url('../images/glasses-icon.svg')
+    cursor: pointer
+    &:hover
+        background-image: url('../images/glasses_hover.svg')
+
+.top
+    max-width: 1920px
+    background-color: #C2DA6B
+    position: relative
+    margin: 0 auto
+    &__container
+        position: relative
+    &__rectangle_white_left
+        left: -240px
+        bottom: 0px
+        width: 737px
+        min-width: 515px
+        height: 175px
+        position: absolute
+        background-color: white
+        @include respond-to(1200)
+            height: 133px
+        @include respond-to(768)
+            display: none
+    &__rectangle_white_right
+        width: 498px
+        height: 498px
+        background-color: white
+        position: absolute
+        top: 0px
+        right: -250px
+        z-index: 3
+        @include respond-to(1440)
+            display: none
+    &__grid
+        display: grid
+        grid-template-columns: 864px 758px
+        grid-template-rows: subgrid
+        width: 100%
+        height: 733px
+        @include respond-to(1200)
+            height: 606px
+            grid-template-columns: 864px
+            grid-template-rows: 280px 150px 133px
+        @include respond-to(768)
+            height: 737px
+            grid-template-columns: 864px
+            grid-template-rows: 330px 150px 255px
+        @include respond-to(700)
+            margin: 0 auto
+            width: 500px
+            height: 675px
+            grid-template-columns: 500px
+            grid-template-rows: 220px 200px 255px
+        @include respond-to(576)
+            width: 330px
+            grid-template-columns: 330px
+
+    &__grid-title
+        grid-column: 1
+        grid-row: 1
+        @include respond-to(1200)
+            margin: 0
+            padding-right: 150px
+        @include respond-to(700)
+            padding: 0
+            margin: 40px 0
+    &__title-text
+        margin: 105px 0px 0px 0px
+        @include respond-to(1200)
+            margin: 30px 0
+        @include respond-to(768)
+            margin: 50px 0
+        &_regular
+            font-family: 'Montserrat-Regular', sans-serif
+            font-size: 78px
+            font-weight: 400
+            line-height: 110px
+            letter-spacing: 3px
+            text-align: left
+            @include respond-to(1200)
+                font-size: 57px
+                font-weight: 400
+                line-height: 90px
+                letter-spacing: 0px
+                text-align: left
+            @include respond-to(700)
+                font-size: 50px
+                font-weight: 400
+                line-height: 70px
+                letter-spacing: 0px
+                text-align: center
+            @include respond-to(576)
+                font-size: 44px
+                font-weight: 400
+                line-height: 55px
+                letter-spacing: 0px
+                text-align: center
+
+    &__info
+        display: flex
+        width: 685px
+        height: 175px
+        justify-content: space-between
+        align-items: center
+        @include respond-to(1200)
+            height: 133px
+    &__grid-info
+        grid-column: 1
+        grid-row: 2
+        margin-top: 105px
+        @include respond-to(1200)
+            grid-column: 1
+            grid-row: 3
+            margin-top: 40px
+        @include respond-to(768)
+            align-items: flex-start
+            height: 240px
+            margin: 40px 0
+            flex-direction: column
+        @include respond-to(700)
+            width: 500px
+            align-items: center
+            margin-top: 40px
+        @include respond-to(576)
+            width: 320px
+
+    &__info-btn-container
+        width: 329px
+        height: 68px
+        position: relative
+        margin: auto 0
+        @include respond-to(768)
+            margin: 30px 0px
+    &__info-btn
+        position: absolute
+
+    &__grid-date
+        grid-column: 2
+        grid-row: 2
+        margin-top: 95px
+        @include respond-to(1440)
+            margin-left: -155px
+        @include respond-to(1200)
+            grid-column: 1
+            grid-row: 2
+            margin: 40px 0
+        @include respond-to(768)
+            margin: 60px 0
+        @include respond-to(700)
+            padding-top: 60px
+
+    .top-cubes-image
+        position: absolute
+        left: 58%
+        top: 0px
+        z-index: 6
+        @include respond-to(992)
+            left: 70%
+        @include respond-to(768)
+            top: 189px
+            left: 50%
+        @include respond-to(700)
+            display: none
+
+    .squares-image
+        position: absolute
+        z-index: 5
+        top: -43px
+        left: 50%
+        @include respond-to(768)
+            left: 70%
+        @include respond-to(576)
+            display: none
+    @include respond-to(768)
+        height: 672px
+    @include respond-to(700)
+        height: 592px
+
+.date
+    display: flex
+    align-items: center
+    &__text_regular
+        font-family: 'Montserrat-Bold', sans-serif
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        letter-spacing: 5px
+        text-align: left
+        @include respond-to(1440)
+            font-size: 18px
+            font-weight: 700
+            line-height: 22px
+            letter-spacing: 5px
+            text-align: left
+        @include respond-to(768)
+            font-size: 18px
+            font-weight: 700
+            line-height: 22px
+            letter-spacing: 0px
+            text-align: left
+        @include respond-to(576)
+            font-size: 16px
+            line-height: 19px
+            text-align: center
+            letter-spacing: 2px
+
+    .line-btwn-words-image
+        margin: 10px 36px 0 36px
+        @include respond-to(576)
+            width: 30px
+            margin-top: 0px
+    @include respond-to(700)
+        justify-content: center
+
+.button-reg
+    width: 329px
+    height: 68px
+    background-color: #333333
+    color: #C2DA6B
+    border: none
+    font-size: 18px
+    box-shadow: 0px 34px 24px 0px #5879223D
+    &:hover
+        box-shadow: 0px 14px 24px 0px #5879223D
+
+.socials
+    position: relative
+    height: 50px
+    width: 188px
+
+.socials-container
+    width: 148px
+    display: flex
+    justify-content: space-between
+    position: absolute
+    z-index: 2000
+
+.twitter-icon
+    width: 30px
+    height: 25px
+    background-image: url('../images/twitter-icon.svg')
+    cursor: pointer
+    &:hover
+        background-image: url('../images/twitter_hover.svg')
+    @include respond-to(768)
+        background-image: url('../images/gray-twitter-icon.svg')
+
+.inst-icon
+    width: 25px
+    height: 25px
+    background-image: url('../images/inst-icon.svg')
+    cursor: pointer
+    &:hover
+        background-image: url('../images/inst_hover.svg')
+    @include respond-to(768)
+        background-image: url('../images/gray-inst-icon.svg')
+
+.fc-icon
+    width: 12px
+    height: 24px
+    background-image: url('../images/fc-icon.svg')
+    cursor: pointer
+    &:hover
+        background-image: url('../images/f_hover.svg')
+    @include respond-to(768)
+        background-image: url('../images/gray-fc-icon.svg')
+
+.news
+    max-width: 1920px
+    margin: 0 auto
+    overflow: hidden
+    position: relative
+    padding-bottom: 85px
+    &__container
+        position: relative
+    &__rectangle_gray
+        width: 610px
+        min-width: 515px
+        height: 333px
+        background-color: #F0F0F0
+        position: absolute
+        top: -150px
+        left: -113px
+        @include respond-to(992)
+            display: none
+    &__rectangle_green
+        height: 209px
+        width: 465px
+        background-color: #A2CC5C
+        position: absolute
+        left: 76.5%
+        @include respond-to(1200)
+            display: none
+    &__title
+        margin: 150px 0 22px 0
+        @include respond-to(700)
+            margin: 158px auto 65px auto
+        @include respond-to(576)
+            margin: 135px auto 0 auto
+    &__list
+        display: flex
+        flex-direction: column
+    &__list-item
+        width: 948px
+        height: 440px
+        display: flex
+        margin: 56px 0 56px 0
+        position: relative
+        &:hover .news__list-content
+            color: #A2CC5C
+        &:hover .news__list-title
+            color: #A2CC5C
+        &:hover .news__photo
+            transform: scale(1.02)
+            transition: 0.5s
+        @include respond-to(992)
+            width: 690px
+            height: 338px
+            margin: 29px 0
+        @include respond-to(700)
+            width: 513px
+            height: 776px
+            flex-direction: column
+            margin: 35px auto
+        @include respond-to(576)
+            height: 630px
+            width: 340px
+        &_right
+            align-self: flex-end
+            @include respond-to(992)
+                align-self: flex-start
+    &__photo
+        @include respond-to(992)
+            height: 330px
+            width: 330px
+        @include respond-to(700)
+            height: 508px
+            width: 508px
+        @include respond-to(576)
+            width: 335px
+            height: 335px
+    &__list-info
+        align-self: flex-end
+        margin: 0px 10px 10px 48px
+        @include respond-to(700)
+            margin: 10px 0 0 0
+    &__date
+        font-family: 'Baufra-Bold'
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0px
+        text-align: left
+        color: #A2CC5C
+    &__date-item
+        margin: 0 10px 0 10px
+    &__line
+        margin: 0 10px 5px 0
+        @include respond-to(700)
+            display: none
+
+    .double-slash
+        font-family: 'Montserrat-Bold'
+        font-size: 14px
+        font-weight: 900
+        line-height: 17px
+        letter-spacing: 0px
+        text-align: center
+
+    &__list-title
+        font-family: 'Baufra-Bold', sans-serif
+        font-size: 32px
+        line-height: 44px
+        letter-spacing: 0px
+        text-align: left
+        color: #333333
+        @include respond-to(700)
+            margin: 18px 0px 14px 0px
+    &__list-content
+        font-family: 'Montserrat-Regular', sans-serif
+        font-size: 16px
+        font-weight: 400
+        line-height: 28px
+        letter-spacing: 0px
+        text-align: left
+        color: #888888
+        margin: 0
+        @include respond-to(992)
+            display: -webkit-box
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+            overflow: hidden
+            padding: 0
+    &__show-more
+        display: flex
+        justify-content: center
+        margin: 9px 0 91px 0
+    &__show-more-btn
+        width: 230px
+        height: 69px
+        border-radius: 4px
+        border: 1px solid #BBBBBB
+        background-color: white
+        font-family: 'Baufra-Medium'
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 0px
+        text-align: left
+        color: #A2CC5C
+        text-align: center
+        &:hover
+            color: #F0F0F0
+            background-color: #A2CC5C
+            border: 0
+
+    .news-cubes-image_top
+        position: absolute
+        left: 67%
+        top: 51px
+        @include respond-to(992)
+            left: 72%
+        @include respond-to(768)
+            display: none
+
+    .news-tree-image
+        position: absolute
+        top: 998px
+        right: 86.6%
+        @include respond-to(1200)
+            display: none
+
+    .news-cubes-image_bottom
+        position: absolute
+        top: 1900px
+        right: 76%
+        @include respond-to(992)
+            display: none
+
+    .news-squeres-image_right
+        position: absolute
+        top: 1669px
+        left: 86.4%
+        @include respond-to(1200)
+            right: 73%
+        @include respond-to(992)
+            display: none
+
+    .news-squeres-image_left
+        position: absolute
+        top: 1062px
+        right: 71%
+        @include respond-to(1200)
+            right: 85%
+        @include respond-to(992)
+            display: none
+
+.main-title
+    width: auto
+    height: 68px
+    position: relative
+    &__rectangle
+        width: 215px
+        height: 61px
+        background: #C2DA6B
+        @include respond-to(768)
+            left: 45px
+        @include respond-to(700)
+            left: 20px
+            top: 15px
+        @include respond-to(576)
+            height: 44px
+    &__text
+        font-family: 'Montserrat-ExtraBold', sans-serif
+        font-size: 56px
+        font-weight: 900
+        line-height: 68px
+        letter-spacing: 0px
+        margin-top: -80px
+        margin-left: -5px
+        @include respond-to(768)
+            display: block
+            width: 100%
+            text-align: left
+        @include respond-to(700)
+            font-family: 'Montserrat-ExtraBold'
+            font-size: 50px
+            font-weight: 900
+            line-height: 60px
+            letter-spacing: 0px
+            display: block
+            text-align: left
+        @include respond-to(576)
+            font-size: 34px
+            font-weight: 900
+            line-height: 41px
+            letter-spacing: 0px
+            text-align: center
+            margin-top: -50px
+    &__text_regular
+        font-family: 'Montserrat-Regular'
+        font-size: 56px
+        font-weight: 400
+        line-height: 68px
+        letter-spacing: 0px
+        @include respond-to(700)
+            font-family: 'Montserrat-Regular'
+            font-size: 50px
+            font-weight: 400
+            line-height: 60px
+            letter-spacing: 0px
+        @include respond-to(576)
+            font-size: 34px
+            font-weight: 400
+            line-height: 41px
+            letter-spacing: 0px
+
+.partners
+    width: 100%
+    &__title
+        margin: 0px 0 95px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include respond-to(700)
+            margin: 0
+    &__title-item
+        @include respond-to(700)
+            margin: 91px auto 63px auto
+    &__logo
+        margin: 0 auto
+
+.footer
+    width: auto
+    background-color: #333333
+    &__container
+        height: 272px
+        display: flex
+        justify-content: space-between
+        @include respond-to(1140)
+            height: 397px
+            flex-wrap: wrap
+        @include respond-to(700)
+            height: 704px
+            justify-content: normal
+            flex-direction: column
+        @include respond-to(576)
+            height: 704px
+    &__info
+        width: 391px
+        height: 163px
+        display: flex
+        margin: 50px 0
+        flex-direction: column
+        justify-content: space-between
+        @include respond-to(1140)
+            margin-bottom: 0
+        @include respond-to(700)
+            width: 100%
+    &__logos
+        display: flex
+        align-items: center
+        @include respond-to(700)
+            justify-content: center
+    &__logos-main-logo
+        margin-right: 62px
+    &__copyright
+        width: 247px
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: 0px
+        text-align: left
+        color: #BBBBBB
+        @include respond-to(700)
+            width: auto
+            text-align: center
+            padding: 22px 40px
+        @include respond-to(576)
+            padding: 0
+
+    .contacts
+        width: 210px
+        height: 163px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin: 50px 0
+        @include respond-to(1140)
+            margin-bottom: 0
+        @include respond-to(700)
+            margin: 80px auto 0px auto
+            text-align: center
+        @include respond-to(576)
+            margin: 40px auto 0px auto
+
+    .phone
+        font-family: 'Montserrat-Bold'
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        letter-spacing: 0px
+        color: #C2DA6B
+
+    .email
+        font-family: 'Montserrat-Bold'
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        letter-spacing: 0px
+        color: #C2DA6B
+
+    .address
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: 0px
+        text-align: left
+        color: #FFFFFF
+        @include respond-to(700)
+            text-align: center
+
+    &__website-development
+        background-color: #040404
+        height: 42px
+        padding-top: 15px
+        text-align: center
+        font-size: 14px
+        font-weight: 400
+        line-height: 25px
+        letter-spacing: 0em
+        text-align: center
+        color: #BBBBBB
+        text-decoration: underline
+    &__up-arrow
+        position: absolute
+        right: 46px
+        bottom: 104px
+        cursor: pointer
+        @include respond-to(1440px)
+            bottom: 13px
+        @include respond-to(1140px)
+            display: none
+
+.footer-menu
+    width: 414px
+    @include respond-to(1140)
+        width: 930px
+    @include respond-to(700)
+        width: 100%
+        margin: 69px auto 0px auto
+    @include respond-to(576)
+        margin: 64px auto 0px auto
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        padding: 0
+        margin-top: 30px
+        @include respond-to(1140)
+            margin: 0
+            justify-content: center
+    &__item
+        width: 180px
+        margin: 20px 10px 20px 10px
+        @inculde respond-to(1140)
+            margin: 20px 0
+        @include respond-to(1140)
+            text-align: center
+            margin: 0
+            padding: 15px 0px
+        @include respond-to(768)
+            padding: 15px 0px
+        @include respond-to(576)
+            width: 50%
+            padding: 15px 0px
+    &__link
+        font-family: 'Montserrat-Bold'
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        letter-spacing: 0px
+        text-align: left
+        color: #FFFFFF
+        @include respond-to(768)
+            font-size: 14px
+            line-height: 17px
+            letter-spacing: 0px
+            text-align: left
+        @include respond-to(700)
+            justify-content: center
+    &_order
+        @include respond-to(1140)
+            order: 4
+        @include respond-to(700)
+            order: 0

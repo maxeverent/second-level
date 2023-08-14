@@ -1,0 +1,13 @@
+{
+  "name": "yarn-test",
+  "version": "1.0.0",
+  "description": "Learning",
+  "packageManager": "yarn@3.6.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Panfilov Maxim",
+  "license": "MIT",
+  "private": true
+}
